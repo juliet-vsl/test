@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.eot') format('embedded-opentype'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Thin.eot') format('embedded-opentype'),
+        url('../fonts/Roboto-Thin.ttf') format('truetype'),
+        url('../fonts/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.eot') format('embedded-opentype'),
+        url('../fonts/Roboto-Light.ttf') format('truetype'),
+        url('../fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.eot') format('embedded-opentype'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype'),
+        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.eot') format('embedded-opentype'),
+        url('../fonts/Roboto-Bold.ttf') format('truetype'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.eot') format('embedded-opentype'),
+        url('../fonts/Roboto-Black.ttf') format('truetype'),
+        url('../fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Rubik One';
+    src: url('../fonts/RubikOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/Euclid\ Circular\ A\ Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('../fonts/Euclid\ Circular\ A\ Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+$main-font: 'Roboto', sans-serif;
+$bg-font: 'Rubik One', sans-serif;
+
+$main-color: #292D32;
+$bg-color: #F2F2F2;
+$text-color: #838383;
+
+html {
+    font-size: 15px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    font-family: $main-font;
+    font-weight: 400;
+
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+
+@import 'blocks/about';
+
+.bg-text {
+    font-family: $bg-font;
+    text-transform: uppercase;
+    line-height: 92.7%;
+    z-index: 1;
+
+    color: transparent;
+    opacity: 0.6;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.2));
+    -webkit-background-clip: text;
+    -webkit-background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.2));
+}
+
+.text {
+    font-weight: 300;
+    line-height: 150%;
+    color: $text-color;
+}
+
+.title {
+    font-size: 50px;
+    line-height: 50px;
+    color: $main-color;
+}
+
+.link {
+    height: 55px;
+
+    font-size: 16px;
+    line-height: 30px;
+    color: $main-color;
+    text-decoration: none;
+
+    display: block;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    &-text {
+        margin-left: 12px;
+    }
+
+    &:hover {
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
+
+.subtitle {
+    font-size: 25px;
+    color: $main-color;
+    line-height: 37.5px;
+}
+
+
+
+
+@import 'blocks/catalog';
+
+@import 'blocks/advantages';
+
+@import 'blocks/news';
+
+@import 'blocks/contacts';
+
+@import 'blocks/footer';
+
+
+
+@media (max-width: 376px) {
+    .page {
+        max-width: 375px;
+    }
+
+    .main {
+        width: 375px;
+    }
+
+    .container {
+        width: 375px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .text {
+        font-size: 15px;
+        line-height: 150%;
+    }
+
+    .link {
+        font-size: 15px;
+
+        &-text {
+            margin-left: 15px;
+        }
+    }
+
+    .link-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 130%;
+    }
+}
